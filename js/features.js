@@ -14,7 +14,7 @@ const displayCategories = (categories) => {
         const btnContainer = document.createElement('div')
         const categoryContainer = document.getElementById('category-container');
         btnContainer.innerHTML = `
-        <div class="flex items-center justify-center text-2xl font-bold border-gray-200 border-2 rounded-4xl px-16 py-2 hover:bg-[#0E7A81] hover:text-white" onclick="loadPetsByCategory('${item.category}')">
+        <div id="btn-${item.category}" class="category-btn flex items-center justify-center text-2xl font-bold border-gray-200 border-2 rounded-4xl px-16 py-2 hover:bg-[#0E7A81] hover:text-white" onclick="loadPetsByCategory('${item.category}')">
         <img src="${item.category_icon}" class="lg:min-h-[50px] lg:max-w-[50px]" alt="">
         <span>${item.category}</span> 
          </div>
@@ -194,6 +194,15 @@ const likeBTN = (image) => {
 
 const loadPetsByCategory = (category) => {
     const petsContainer =  document.getElementById('pets-container');
+    const allBTN = document.querySelectorAll('.category-btn');
+    allBTN.forEach(btn => {
+      btn.classList.remove('bg-[#0E7A81]', 'text-white', 'border-[#0E7A81]')
+    })
+
+    const activeBTN = document.getElementById(`btn-${category}`)
+    if(activeBTN){
+      activeBTN.classList.add('bg-[#0E7A81]', 'text-white', 'border-[#0E7A81]')
+    }
     petsContainer.innerHTML = `
     <div class="flex justify-center items-center col-span-full min-h-[500px]">
     <span class="loading loading-bars loading-xl lg:w-1/7"></span>
