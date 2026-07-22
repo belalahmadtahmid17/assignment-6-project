@@ -30,8 +30,11 @@
           </div>
         </div>
     </header>
+
   <!-- main section start -->
     <main class="space-y-20">
+
+
       <!-- banner section -->
   <section class="mx-auto text-center space-y-8">
     <h1 class=" text-2xl font-semibold">Bringing Families Together ❤️‍🔥 </h1>
@@ -41,6 +44,8 @@
     <button class="btn p-8 rounded-xl bg-[#0E7A81] text-white text-xl font-semibold">View more</button>
     <div class="flex justify-center"><img src="images/pet.webp" alt=""></div>
   </section>
+
+
   <!-- pet section -->
    <section class="flex flex-col justify-center space-y-10 mx-auto text-center  lg:px-60">
     <div class="space-y-5"><h1 class="text-4xl font-bold">Adopt  Your  Best Friend</h1>
@@ -51,19 +56,21 @@
     </div>
     <!-- sort container -->
     <div class="flex justify-between p-2"><h1 class="text-2xl font-bold">Best Deal For You</h1>
-        <button class="btn bg-[#0E7A81] text-white rounded-xl">Sort By Price</button> 
+        <button class="btn bg-[#0E7A81] text-white rounded-xl" onclick="sortByPrice()">Sort By Price</button> 
     </div>
     <!-- pets and liked pic -->
     <div class="flex flex-col justify-center items-start lg:flex-row w-full p-2 lg:space-x-5 gap-y-5">
       <!-- pets container -->
-    <div class="grid lg:grid-cols-3 justify-between gap-4 border border-gray-300 rounded-xl w-full p-4" id="pets-container">
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-between gap-4 border border-gray-300 rounded-xl w-full p-4" id="pets-container">
     </div>
     <!-- liked pics corner -->
-     <div class="bg-gray-200 grid grid-cols-2 content-start p-4 w-full min-h- lg:w-[600px] rounded-xl gap-2 self-stretch" id="liked-img-container">
+     <div class="bg-gray-200 grid grid-cols-2 content-start p-4 w-full min-h-[200px] lg:w-[600px] rounded-xl gap-2 self-stretch" id="liked-img-container">
      </div>
     </div>
    </section>
+
     </main>
+
   <!-- footer section start -->
     <footer class="bg-black min-h-[600px] space-y-5 text-white flex items-baseline flex-col lg:flex-row lg:justify-between p-20">
       <!-- first column -->
@@ -100,6 +107,9 @@
         <button class="btn bg-[#0E7A81] border-[#0E7A81] text-white min-h-16 max-w-80 text-center rounded-xl text-xl">Subscribe</button>
       </div>
     </footer>
-    <script src="js/categories.js"></script>
+    <!--  modal container -->
+    <div id="modal-container">
+    </div>
+    <script src="js/features.js"></script>
 </body>
 </html>
