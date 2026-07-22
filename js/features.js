@@ -14,7 +14,7 @@ const displayCategories = (categories) => {
         const btnContainer = document.createElement('div')
         const categoryContainer = document.getElementById('category-container');
         btnContainer.innerHTML = `
-        <div id="btn-${item.category}" class="category-btn flex items-center justify-center text-2xl font-bold border-gray-200 border-2 rounded-4xl px-16 py-2 hover:bg-[#0E7A81] hover:text-white" onclick="loadPetsByCategory('${item.category}')">
+        <div id="btn-${item.category}" class="space-x-2 category-btn flex items-center justify-center text-2xl font-bold border-gray-200 border-2 rounded-4xl px-16 py-2 hover:bg-[#0E7A81] hover:text-white" onclick="loadPetsByCategory('${item.category}')">
         <img src="${item.category_icon}" class="lg:min-h-[50px] lg:max-w-[50px]" alt="">
         <span>${item.category}</span> 
          </div>
@@ -47,7 +47,7 @@ const sortByPrice = () => {
   currentPets.sort((a, b) => {
     const priceA = a.price ? parseFloat(a.price) : 0;
     const priceB = b.price ? parseFloat(b.price) : 0;
-    return priceA - priceB;
+    return priceB - priceA;
   });
   displayPets(currentPets);
 }
